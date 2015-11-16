@@ -48,8 +48,8 @@ import com.leleusoft.gameframework.Screen;
 public abstract class AndroidGame extends Activity implements Game {
 	
 	
-	private static final int FRAMEBUFFER_WIDTH = 1280; 
-	private static final int FRAMEBUFFER_HEIGHT = 720;
+	private int FRAMEBUFFER_WIDTH = 1280;
+	private int FRAMEBUFFER_HEIGHT = 720;
 	
 	
 	private static final String FIRST_TIME_CREATE_KEY = "FIRSTTIMECREATED";
@@ -230,4 +230,10 @@ public abstract class AndroidGame extends Activity implements Game {
 
 		return new Point(largerDimension, smallerDimension);
 	}
+
+    protected void changeFrameBufferParams(int width,int height)
+    {
+        FRAMEBUFFER_WIDTH = width;
+        FRAMEBUFFER_HEIGHT=height;
+    }
 }

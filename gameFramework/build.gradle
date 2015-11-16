@@ -4,7 +4,7 @@ apply plugin: 'com.jfrog.bintray'
 
 
 group = 'com.leleusoft'
-version = '1.0'
+version = '1.0.2'
 
 android {
     compileSdkVersion 23
@@ -37,7 +37,8 @@ install {
                 packaging 'aar'
 
                 // Add your description here
-                name 'A simple framework with full capability to build fully functional games.'
+                name 'Android Game Framework'
+                description 'A simple framework with full capability to build fully functional games'
                 url siteUrl
 
                 // Set your license
@@ -80,7 +81,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "android-game-framework"
+        name = "gameFramework"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
